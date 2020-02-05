@@ -7,7 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./currency-input.component.scss']
 })
 export class CurrencyInputComponent {
-  @Input() selectedCurrency: Currency;
+  @Input() selectedCurrency: string;
   @Input() isInput: boolean;
   @Input() dropdownList: Currency[];
 
