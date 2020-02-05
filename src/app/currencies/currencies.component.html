@@ -1,0 +1,9 @@
+<mat-card class="currency">
+    <mat-card-title>{{ currency.name }}</mat-card-title>
+    <mat-card-title class="conversion-text">{{ currency.rate * amount | number:'1.0-5' }}</mat-card-title>
+    <mat-card-subtitle><i>{{ currency.name }} - {{ currency.description }}</i></mat-card-subtitle>
+    <mat-card-content><i>1 {{ currency.base }} = {{ currency.rate | number:'1.0-5' }} {{ currency.description }}</i></mat-card-content>
+    <button mat-mini-fab color="warn" class="vertical-center no-box-shadow" (click)="remove.emit(index)">
+        <mat-icon aria-hidden="false" class="p-0">close</mat-icon>
+    </button>
+</mat-card>

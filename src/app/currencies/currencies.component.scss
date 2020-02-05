@@ -1,0 +1,16 @@
+.vertical-center {
+	position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translate(0,-50%);
+}
+
+.conversion-text {
+	position: absolute;
+	top: 20px;
+	right: 16px;
+}
+
+.no-box-shadow {
+	box-shadow: none;
+}

@@ -1,0 +1,16 @@
+<button mat-flat-button color="primary" class="w-100" id="showDropdown" (click)="showDropdown.emit()" *ngIf="!isInput && dropdownList.length > 0">
+    <mat-icon aria-hidden="false" class="px-4">add</mat-icon>
+    Add More Currencies
+</button>
+<div class="w-100" *ngIf="isInput">
+    <div class="row">
+        <div class="col-8 pr-0">
+            <select class="form-control" [(ngModel)]="selectedCurrency">
+                <option *ngFor="let currency of dropdownList" [value]="currency">{{ currency }}</option>
+            </select>
+        </div>
+        <div class="col-4 pl-0">
+            <button mat-flat-button color="accent" class="w-100" id="addCurrency" (click)="addCurrency.emit(selectedCurrency)">Submit</button>
+        </div>
+    </div>
+</div>
